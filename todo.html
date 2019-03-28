@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Angular</title>
+</head>
+
+<body>
+    <div ng-app="todo" ng-init="todolist=['man','woman']" ng-controller="todoList">
+        <h1>Todolist</h1>
+        <ul>
+            <li ng-repeat="todo in todolist track by $index">{{todo}} <button ng-click="deleteItem($index)">X</button></li>
+        </ul>
+        <input type="text" name="" ng-model="item_to_do">
+        <button ng-click="addItems()">Add</button>
+    </div>
+    <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+    <script src="todo.js"></script>
+</body>
+
+</html>
